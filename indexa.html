@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <<!DOCTYPE html>
+meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'jss.css'%}">
+</head>
+<body bgcolor="pink">
+  {%include 'navigation.html'%}
+  
+
+</body>
+<body>
+    
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'vt.jpg' %}"  class="card-img-right" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">VOTING PORTAL</h5>
+          <p class="card-text">ELECTIONS TO BE HELD IN 7 PHASES </p>
+          <button type="button" class="btn btn-warning"> <a href="{%url 'htmlwebsite:votingresult'%}">
+            Infopage</button></a>
+            <p>                         Please register yourself for online voting by filling the given form ->
+            </p> 
+            
+     <form method="POST">
+      {% csrf_token %}
+      <label for="fname">Name</label>
+      <input type="text" id="fname" name="name" placeholder="Your name..">
+<br>
+      <label for="lname">Email</label>
+      <input type="text" id="lname" name="email" placeholder="Your email..">
+      <br>
+      <label for="lname">Contact</label>
+      <input type="text" id="lname" name="phone" placeholder="your registered number..">
+
+      <br>
+      <label for="subject"><residence></address></label>
+      <textarea id="subject" name="address" placeholder="Write something.." style="height:30px"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+        
+          
+        </div>
+      </div>
+    
+    
+    
+    
+
+
+  <h1>HI!! WELCOME TO VOTING HOME PAGE 
+     </h1> 
+     <h1>Take part in election and choose you own leader!!</h1> 
+
+
+    
+</body>
+</html>
